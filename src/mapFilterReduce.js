@@ -7,6 +7,17 @@ let cart = [
     {id:6, productName:"Pot", quantity:5, unitPrice:150},
 ]
 
+cart.map(product=>{
+    console.log(product.productName + " : " + product.quantity * product.unitPrice)
+
+})
+
+let total = cart.reduce((acc,product)=>acc+product.unitPrice * product.quantity,0)
+console.log(total)
+
+let quantityOver2 = cart.filter(product=>product.quantity>2)
+console.log(quantityOver2)
+
 function addToCart(sepet) {
     sepet.push({id:7, productName:"Ruhsat", quantity:1, unitPrice:20})
 }
@@ -14,3 +25,11 @@ function addToCart(sepet) {
 addToCart(cart)
 
 console.log(cart)
+
+let sayi = 10
+
+function sayiTopla(number) {
+    number+=1
+}
+sayiTopla(sayi)
+console.log(sayi)
