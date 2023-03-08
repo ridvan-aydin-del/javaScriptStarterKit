@@ -17,3 +17,8 @@ console.log(userService.getById(2))
 
 userService.getById(1)
 userService.list()
+
+console.log("---------------------")
+userService.load()
+console.log(userService.customers)
+console.log(userService.employees)
